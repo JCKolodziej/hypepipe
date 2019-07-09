@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+
+#ResetButton{
+    text-align: center;
+    padding-top: 23%;
+}
+
+.container{
+    text-align:center;
+    padding: 10%;
+}
+
+.cell{
+    margin: 1px;
+    text-align: center;
+}
