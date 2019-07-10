@@ -1,11 +1,14 @@
-// let cell = document.querySelectorAll('[data-position-x="1"][data-position-y="1"]')[0];
-// let nextcell = document.querySelectorAll('[data-position-x="2"][data-position-y="1"]')[0];
+let cell = document.querySelectorAll('[data-position-x="1"][data-position-y="1"]')[0];
+let nextcell = document.querySelectorAll('[data-position-x="1"][data-position-y="2"]')[0];
 
 const connectionPairs = {'1':'3', '2':'4', '3':'1', '4':'2'};
 const numberOfTilesToWin = 2;
 
+
+
+
 function findNextCell(currentCell) {
-	let currentCellConnectionEdge = currentCell.dataset['edge-2'];
+	let currentCellConnectionEdge = currentCell.firstElementChild.dataset['edge-2'];
 	let currentCellPositionX = parseInt(currentCell.dataset.positionX, 10);
 	let currentCellPositionY = parseInt(currentCell.dataset.positionY, 10);
 
@@ -35,8 +38,8 @@ function findNextCell(currentCell) {
 }
 
 function isValidConnection(currentCell, nextCell) {
-	let currentCellConnectionEdge = currentCell.dataset['edge-2'];
-	let nextCellConnectionEdge = nextCell.dataset['edge-1'];
+	let currentCellConnectionEdge = currentCell.firstElementChild.dataset['edge-2'];
+	let nextCellConnectionEdge = nextCell.firstElementChild.dataset['edge-1'];
 
 	return connectionPairs[currentCellConnectionEdge] === nextCellConnectionEdge
 }
