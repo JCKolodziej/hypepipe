@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/dragula.css">
+    <title>HypePipe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="ResetButton">
+        <a href="/game"><button type='button' class='btn btn-info btn-lg'>RESET GAME</button></a>
+    </div>
+    <script src='/static/dragula.js'></script>
+    <script>
+        let drake = dragula({
+            isContainer: function (el) {
+                return el.classList.contains('dragula-container');
+            }
+        });
+        document.getElementById('21').style.backgroundImage="url(images/img.jpg)"; // specify the image path here
+        document.getElementById('510').style.backgroundImage="url(images/img.jpg)"; // specify the image path here
+
+</script>
+
+<div class="container">
+    <div id = "PipesContainer">
+        <div class="col-xl-10 jumbotron jumbotron-fluid">
+            {% for i in range(0, 11) %}
+            <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
+                <ul>
+                    pipe straight
+                </ul>
+            </div>
+            {% endfor %}
+            {% for i in range(0, 8) %}
+            <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
+                <ul>
+                    pipe curved
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% set i = 0 %}
+    {% for y in range(1, 8) %}
+        <div class="row">
+            {% for x in range(1,11) %}
+                <div class="col-lg-1 btn btn-info dragula-container cell"
+                     data-position-x='{{ x }}' data-position-y='{{ y }}' data-edge-1="" data-edge-2=""
+                     id="{{ y }}{{ x }}"></div>
+                {% set i = i + 1 %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+
+</body>
+</html>

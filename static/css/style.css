@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+}
+
+#PlayButton{
+    text-align: center;
+    padding-top: 23%;
+}
+
+#ResetButton{
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: right;
+}
+
+#PipesContainer{
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+}
+
+.PipeBlock ul{
+    padding: 0;
+    margin: 0;
+}
+
+.PipeBlock{
+    margin: 2px;
+    border: 1px solid black;
+}
+
+.container{
+    text-align:center;
+}
+
+.cell{
+    margin: 1px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    padding: 2px;
+}
+
+.cell ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
