@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+#PlayButton{
+    text-align: center;
+    padding-top: 23%;
+}
+
+#ResetButton{
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: right;
+
+}
+
+.container{
+    text-align:center;
+}
+
+.cell{
+    margin: 1px;
+    text-align: center;
+    height: 60px;
+    padding: 2px;
+}
