@@ -28,19 +28,19 @@
 </script>
 
 <div class="container">
-    <div id = "PipesContainer">
-        <div class="col-xl-10 jumbotron jumbotron-fluid">
+    <div class="d-flex justify-content-center">
+        <div class="col-xl-10 jumbotron jumbotron-fluid " id = "PipesContainer">
             {% for i in range(0, 11) %}
             <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
                 <ul>
-                    pipe straight
+                    <img class =" PipeImage " src="static/icons/straight-vertical.png">
                 </ul>
             </div>
             {% endfor %}
             {% for i in range(0, 8) %}
             <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
                 <ul>
-                    pipe curved
+                    <img class = PipeImage src="static/icons/curved1.jpg">
                 </ul>
             </div>
             {% endfor %}
@@ -48,9 +48,9 @@
     </div>
     {% set i = 0 %}
     {% for y in range(1, 8) %}
-        <div class="row">
+        <div class="row justify-content-center">
             {% for x in range(1,11) %}
-                <div class="col-lg-1 btn btn-info dragula-container cell"
+                <div class="cell col-lg-1 btn col-1 dragula-container"
                      data-position-x='{{ x }}' data-position-y='{{ y }}' data-edge-1="" data-edge-2=""
                      id="{{ y }}{{ x }}"></div>
                 {% set i = i + 1 %}
