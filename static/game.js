@@ -2,7 +2,7 @@ let cell = document.querySelectorAll('[data-position-x="1"][data-position-y="1"]
 let nextcell = document.querySelectorAll('[data-position-x="1"][data-position-y="2"]')[0];
 
 const connectionPairs = {'1':'3', '2':'4', '3':'1', '4':'2'};
-const numberOfTilesToWin = 2;
+const numberOfTilesToWin = 4;
 
 
 
@@ -48,7 +48,8 @@ function isValidConnection(currentCell, nextCell) {
 function checkWin() {
 	// debugger;
 	let correctTileCount = 0;
-	let currentCell = document.querySelectorAll('[data-position-x="1"][data-position-y="1"]')[0];
+	let currentCell = document.getElementById('21');
+
 	try {
 		while (correctTileCount < numberOfTilesToWin) {
 			let nextCell = findNextCell(currentCell);
@@ -63,10 +64,14 @@ function checkWin() {
 
 	}
 
-	if (correctTileCount === numberOfTilesToWin){
-		alert('Great job, you\'ve won')
+	if (correctTileCount === numberOfTilesToWin && currentCell.id === '510'){
+		window.location.href = "/win"
 	}
 }
 
 
-checkWin();
+// checkWin();
+
+let checkButton = document.getElementById('checkButton');
+
+checkButton.addEventListener('click', checkWin);

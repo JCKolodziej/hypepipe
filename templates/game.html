@@ -18,31 +18,35 @@
         <button type='button' class='btn btn-info btn-lg'>RESET GAME</button>
     </a>
 </div>
-<script src='/static/dragula.js'></script>
-<script>
-    let drake = dragula({
-        isContainer: function (el) {
-            return el.classList.contains('dragula-container');
-        }
-    });
+<div id="ResetButton">
+    <button id="checkButton" type='button' class='btn btn-info btn-lg'>CHECK</button>
+</div>
+
+    <script src='/static/dragula.js'></script>
+    <script>
+        let drake = dragula({
+            isContainer: function (el) {
+                return el.classList.contains('dragula-container');
+            }
+        });
 
 
-</script>
+    </script>
 
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="col-xl-10 jumbotron jumbotron-fluid " id="PipesContainer">
             {% for i in range(0, 9) %}
                 <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
-                    <ul>
-                        <img class="PipeImage straight" src="static/icons/straight-vertical.png">
+                    <ul data-edge-1=1 data-edge-2=3>
+                        <img class="PipeImage straight" src="static/icons/straight-vertical.png" data-direction="0">
                     </ul>
                 </div>
             {% endfor %}
             {% for i in range(0, 4) %}
                 <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
-                    <ul>
-                        <img class="PipeImage curved" src="static/icons/curved1.png">
+                    <ul data-edge-1=3 data-edge-2=2>
+                        <img class="PipeImage curved" src="static/icons/curved1.png" data-direction="0">
                     </ul>
                 </div>
             {% endfor %}
@@ -62,11 +66,14 @@
 </div>
 
 <script>
+    document.getElementById('21').dataset['edge-2'] = '2';
     document.getElementById('21').style.backgroundImage = "url(static/icons/start.png)"; // specify the image path here
     document.getElementById('21').style.backgroundSize = '88px'
     document.getElementById('510').style.backgroundImage = "url(static/icons/finish.png)"; // specify the image path here
     document.getElementById('510').style.backgroundSize = '88px'; // specify the image path here
 </script>
+<script src="static/game.js" defer></script>
+<script src="static/rotate_pipe.js" defer></script>
 
 
 </body>
