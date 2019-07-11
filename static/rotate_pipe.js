@@ -38,22 +38,22 @@ for (let pipe of curvedPipes) {
 function rotateCurvedPipe(event) {
 	let pipe = event.target;
 	if (pipe.dataset.direction === "0") {
-		pipe.src = "static/icons/curved2.png";
+		pipe.src = "static/icons/curved3.png";
 		pipe.parentElement.dataset["edge-1"] = "1";
 		pipe.parentElement.dataset["edge-2"] = "4";
 		pipe.dataset.direction = "1"
 	} else if (pipe.dataset.direction === "1") {
-		pipe.src = "static/icons/curved3.png";
+		pipe.src = "static/icons/curved4.png";
 		pipe.parentElement.dataset["edge-1"] = "2";
 		pipe.parentElement.dataset["edge-2"] = "1";
 		pipe.dataset.direction = "2"
 	} else if (pipe.dataset.direction === "2") {
-		pipe.src = "static/icons/curved4.png";
+		pipe.src = "static/icons/curved1.png";
 		pipe.parentElement.dataset["edge-1"] = "3";
 		pipe.parentElement.dataset["edge-2"] = "2";
 		pipe.dataset.direction = "3"
 	} else if (pipe.dataset.direction === "3") {
-		pipe.src = "static/icons/curved1.png";
+		pipe.src = "static/icons/curved2.png";
 		pipe.parentElement.dataset["edge-1"] = "4";
 		pipe.parentElement.dataset["edge-2"] = "3";
 		pipe.dataset.direction = "0"
