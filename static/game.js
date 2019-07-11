@@ -2,7 +2,7 @@ let cell = document.querySelectorAll('[data-position-x="1"][data-position-y="1"]
 let nextcell = document.querySelectorAll('[data-position-x="1"][data-position-y="2"]')[0];
 
 const connectionPairs = {'1':'3', '2':'4', '3':'1', '4':'2'};
-const numberOfTilesToWin = 4;
+const numberOfTilesToWin = 12;
 
 
 
@@ -46,7 +46,6 @@ function isValidConnection(currentCell, nextCell) {
 
 
 function checkWin() {
-	// debugger;
 	let correctTileCount = 0;
 	let currentCell = document.getElementById('21');
 
@@ -54,6 +53,7 @@ function checkWin() {
 		while (correctTileCount < numberOfTilesToWin) {
 			let nextCell = findNextCell(currentCell);
 			if (isValidConnection(currentCell, nextCell)) {
+				console.log('yes');
 				currentCell = nextCell;
 				correctTileCount++
 			} else {
