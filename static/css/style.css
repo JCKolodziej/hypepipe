@@ -26,7 +26,6 @@ body{
 
 .PipeBlock{
     margin: 2px;
-    border: 1px solid black;
     padding: 5px 0 0 0 ;
     width: 70px;
     height: 80px;
@@ -73,6 +72,11 @@ body{
 
 img{
     height: 88px;
+}
+
+#win {
+    background: url(https://media.giphy.com/media/12fmPI7m38W4eY/giphy.gif) no-repeat center center fixed;
+    background-size: cover;
 }
 
 
