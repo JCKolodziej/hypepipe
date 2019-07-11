@@ -17,6 +17,10 @@ body{
     border:2px solid black;
 }
 
+#ResetButton button{
+    border:2px solid black;
+}
+
 #PipesContainer{
     margin: 2% 0 2% 0;
     border: 2px solid black;
@@ -37,8 +41,8 @@ body{
 }
 
 .PipeImage{
-
     height: 70px;
+    max-width: 70px;
 }
 
 .container{
