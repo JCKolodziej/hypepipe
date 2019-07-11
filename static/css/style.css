@@ -33,7 +33,7 @@ body{
 }
 
 .PipeImage{
-    width: 62px;
+
     height: 70px;
 }
 
@@ -62,7 +62,6 @@ body{
 }
 
 .cell ul img{
-    width: 93px;
     height: 88px;
 }
 
@@ -70,6 +69,10 @@ body{
     width: 100%;
     margin: 0;
     text-align: center;
+}
+
+img{
+    height: 88px;
 }
 
 

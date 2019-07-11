@@ -32,14 +32,14 @@
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="col-xl-10 jumbotron jumbotron-fluid " id="PipesContainer">
-            {% for i in range(0, 11) %}
+            {% for i in range(0, 9) %}
                 <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
                     <ul>
                         <img class=" PipeImage " src="static/icons/straight-vertical.png">
                     </ul>
                 </div>
             {% endfor %}
-            {% for i in range(0, 8) %}
+            {% for i in range(0, 4) %}
                 <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
                     <ul>
                         <img class=PipeImage src="static/icons/curved1.png">
@@ -63,7 +63,9 @@
 
 <script>
     document.getElementById('21').style.backgroundImage = "url(static/icons/start.png)"; // specify the image path here
+    document.getElementById('21').style.backgroundSize = '88px'
     document.getElementById('510').style.backgroundImage = "url(static/icons/finish.png)"; // specify the image path here
+    document.getElementById('510').style.backgroundSize = '88px'; // specify the image path here
 </script>
 
 
