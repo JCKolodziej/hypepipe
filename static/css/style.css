@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: #51A5A4;
 }
 
 #PlayButton{
@@ -10,11 +10,16 @@ body{
 #ResetButton{
     margin-right: 5%;
     margin-top: 5%;
-    text-align: right;
+    text-align: center;
+}
+
+#ResetButton a button {
+    border:2px solid black;
 }
 
 #PipesContainer{
     margin: 2% 0 2% 0;
+    border: 2px solid black;
 }
 
 .PipeBlock ul{
@@ -37,10 +42,12 @@ body{
 }
 
 .container{
-    text-align:center;
-    margin: 0 10% 0 10%;
+    text-align: center;
+    margin-top: 2%;
     width: 80%;
     padding: 0;
+    background-color: #395E66;
+    border: 2px solid black;
 }
 
 .cell{
@@ -48,7 +55,8 @@ body{
     text-align: center;
     padding: 0;
     height: 90px;
-    border: 1px solid gray;
+    border: 1px solid black;
+    background-color: #B4D2E7;
     /*content:"";*/
     /*display:block;*/
     /*padding-top: 100%;*/
