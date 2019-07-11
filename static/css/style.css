@@ -41,7 +41,6 @@ body{
 }
 
 .PipeImage{
-    height: 70px;
     max-width: 70px;
 }
 
@@ -72,9 +71,6 @@ body{
     text-align: center;
 }
 
-.cell ul img{
-    height: 88px;
-}
 
 .row{
     width: 100%;
@@ -82,9 +78,6 @@ body{
     text-align: center;
 }
 
-img{
-    height: 88px;
-}
 
 #win {
     background: url(https://media.giphy.com/media/12fmPI7m38W4eY/giphy.gif) no-repeat center center fixed;
