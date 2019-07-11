@@ -7,42 +7,44 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/dragula.css">
     <title>HypePipe</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div id="ResetButton">
-        <a href="/game"><button type='button' class='btn btn-info btn-lg'>RESET GAME</button></a>
-    </div>
-    <script src='/static/dragula.js'></script>
-    <script>
-        let drake = dragula({
-            isContainer: function (el) {
-                return el.classList.contains('dragula-container');
-            }
-        });
-        document.getElementById('21').style.backgroundImage="url(/static/icons/start.jpg)"; // specify the image path here
-        document.getElementById('510').style.backgroundImage="url(/static/icons/start.jpg)"; // specify the image path here
+<div id="ResetButton">
+    <a href="/game">
+        <button type='button' class='btn btn-info btn-lg'>RESET GAME</button>
+    </a>
+</div>
+<script src='/static/dragula.js'></script>
+<script>
+    let drake = dragula({
+        isContainer: function (el) {
+            return el.classList.contains('dragula-container');
+        }
+    });
+
 
 </script>
 
 <div class="container">
     <div class="d-flex justify-content-center">
-        <div class="col-xl-10 jumbotron jumbotron-fluid " id = "PipesContainer">
+        <div class="col-xl-10 jumbotron jumbotron-fluid " id="PipesContainer">
             {% for i in range(0, 11) %}
-            <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
-                <ul>
-                    <img class =" PipeImage " src="static/icons/straight-vertical.png">
-                </ul>
-            </div>
+                <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
+                    <ul>
+                        <img class=" PipeImage " src="static/icons/straight-vertical.png">
+                    </ul>
+                </div>
             {% endfor %}
             {% for i in range(0, 8) %}
-            <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
-                <ul>
-                    <img class = PipeImage src="static/icons/curved1.jpg">
-                </ul>
-            </div>
+                <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
+                    <ul>
+                        <img class=PipeImage src="static/icons/curved1.png">
+                    </ul>
+                </div>
             {% endfor %}
         </div>
     </div>
@@ -58,6 +60,11 @@
         </div>
     {% endfor %}
 </div>
+
+<script>
+    document.getElementById('21').style.backgroundImage = "url(static/icons/start.png)"; // specify the image path here
+    document.getElementById('510').style.backgroundImage = "url(static/icons/finish.png)"; // specify the image path here
+</script>
 
 
 </body>
