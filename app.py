@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def load_main_page():
-    # return render_template('mainpage.html')
-    return render_template('roboczy.html')
+    return render_template('mainpage.html')
+    # return render_template('roboczy.html')
 
 
 @app.route('/game')
