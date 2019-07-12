@@ -1,51 +1,51 @@
-body{
+body {
     background-color: #51A5A4;
 }
 
-#PlayButton{
+#PlayButton {
     text-align: center;
     padding-top: 23%;
 }
 
-#ResetButton{
+#ResetButton {
     margin-right: 5%;
     margin-top: 5%;
     text-align: center;
 }
 
 #ResetButton a button {
-    border:2px solid black;
+    border: 2px solid black;
 }
 
-#ResetButton button{
-    border:2px solid black;
+#ResetButton button {
+    border: 2px solid black;
 }
 
-#PipesContainer{
+#PipesContainer {
     margin: 2% 0 2% 0;
     border: 2px solid black;
 }
 
-.PipeBlock ul{
+.PipeBlock ul {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
 }
 
-.PipeBlock{
+.PipeBlock {
     margin: 2px;
-    padding: 5px 0 0 0 ;
+    padding: 5px 0 0 0;
     width: 70px;
     height: 80px;
     text-align: center;
 }
 
-.PipeImage{
+.PipeImage {
     max-width: 70px;
 }
 
-.container{
+.container {
     text-align: center;
     margin-top: 2%;
     width: 80%;
@@ -54,7 +54,7 @@ body{
     border: 2px solid black;
 }
 
-.cell{
+.cell {
     margin: 0;
     text-align: center;
     padding: 0;
@@ -66,18 +66,18 @@ body{
     /*padding-top: 100%;*/
 }
 
-.cell ul{
+.cell ul {
     padding: 0;
     margin: 0;
 }
 
-.cell ul img{
+.cell ul img {
     max-width: 100%;
     height: auto;
 }
 
 
-.row{
+.row {
     width: 100%;
     margin: 0;
     text-align: center;

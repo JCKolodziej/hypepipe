@@ -18,16 +18,16 @@
     <button id="checkButton" type='button' class='btn btn-dark btn-lg'>CHECK</button>
 </div>
 
-    <script src='/static/dragula.js'></script>
-    <script>
-        let drake = dragula({
-            isContainer: function (el) {
-                return el.classList.contains('dragula-container');
-            }
-        });
+<script src='/static/dragula.js'></script>
+<script>
+    let drake = dragula({
+        isContainer: function (el) {
+            return el.classList.contains('dragula-container');
+        }
+    });
 
 
-    </script>
+</script>
 
 <div class="container rounded justify-content-center ">
     <div class="d-flex justify-content-center">
@@ -35,7 +35,8 @@
             {% for i in range(0, 9) %}
                 <div class="col-lg-1 btn byn-info dragula-container PipeBlock">
                     <ul data-edge-1=1 data-edge-2=3 class="d-flex flex-wrap align-items-center">
-                        <img class="PipeImage straight img-fluid" src="static/icons/straight-vertical.png" data-direction="0">
+                        <img class="PipeImage straight img-fluid" src="static/icons/straight-vertical.png"
+                             data-direction="0">
                     </ul>
                 </div>
             {% endfor %}
@@ -64,7 +65,7 @@
 <script>
     document.getElementById('21').dataset['edge-2'] = '2';
     document.getElementById('21').style.backgroundImage = "url(static/icons/start.png)"; // specify the image path here
-    document.getElementById('21').style.backgroundSize = '88px'
+    document.getElementById('21').style.backgroundSize = '88ppx';
     document.getElementById('510').style.backgroundImage = "url(static/icons/finish.png)"; // specify the image path here
     document.getElementById('510').style.backgroundSize = '88px'; // specify the image path here
 </script>
